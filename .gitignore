@@ -2,3 +2,5 @@
 .env
 .DS_Store
 langchain*
+__pycache__
+index
