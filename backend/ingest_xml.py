@@ -12,8 +12,8 @@ from utils_wiki import strip_wiki, normalize_title, iter_mediawiki_pages
 
 load_dotenv()
 
-def xml_to_documents(xml_path: str, min_len: int = 200) -> List[Document]:
-    splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200, separators=["\n\n", "\n", " ", ""])
+def xml_to_documents(xml_path: str, min_len=200, chunk_size=1000, overlap=200) -> List[Document]:
+    splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=overlap, separators=["\n\n", "\n", " ", ""])
     docs: List[Document] = []
     skipped = 0
     for title, raw in iter_mediawiki_pages(xml_path):
