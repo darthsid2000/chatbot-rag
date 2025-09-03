@@ -143,4 +143,3 @@ wiki-rag-app/
 
 - Answers are grounded in retrieved context. If insufficient, the system will return *"Insufficient context"* and suggest clarification.
 - Conversation history is maintained in memory with a short rolling buffer.
-- For production, deploy the backend with a process manager (e.g., gunicorn/uvicorn behind Nginx) and load secrets securely.
